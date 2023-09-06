@@ -1,0 +1,22 @@
+{
+"builders":[
+{
+"type": "azure-arm",
+"account_file": "",
+"project_id": "",
+"source_image": "",
+"ssh_username": "",
+"zone": ""
+}
+],
+"provisioners": [
+{
+"type": "shell",
+"inline": [
+"sudo apt update && sudo apt -y install apache2",
+"sudo systemctl atstus apache2",
+"echo '<!doctype html><html><body><h1>Hello world! I am a customize image in google cloud! </h1></body></html>'"
+]
+}
+]
+}
